@@ -1,0 +1,473 @@
+{
+  "schema_version": 1,
+  "cases": {
+    "threshold_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "alarm": false
+      },
+      "answer_b": {
+        "alarm": false
+      }
+    },
+    "threshold_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "allowed": false,
+        "required_free_mb": 120
+      },
+      "answer_b": {
+        "allowed": false,
+        "required_free_mb": 120
+      }
+    },
+    "threshold_03": {
+      "selected_ids": [
+        "focus",
+        "history"
+      ],
+      "answer_a": {
+        "calls": 3,
+        "remaining_retries": 0
+      },
+      "answer_b": {
+        "calls": 3,
+        "remaining_retries": 0
+      }
+    },
+    "negation_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "may_delete": false
+      },
+      "answer_b": {
+        "may_delete": false
+      }
+    },
+    "negation_02": {
+      "selected_ids": [
+        "focus",
+        "state"
+      ],
+      "answer_a": {
+        "may_import": false,
+        "reason": "客户原始记录禁入"
+      },
+      "answer_b": {
+        "may_import": false,
+        "reason": "客户原始记录禁入"
+      }
+    },
+    "negation_03": {
+      "selected_ids": [
+        "focus",
+        "state"
+      ],
+      "answer_a": {
+        "cloud_call_allowed": false
+      },
+      "answer_b": {
+        "cloud_call_allowed": false
+      }
+    },
+    "units_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "elapsed_ms": 600,
+        "timed_out": true
+      },
+      "answer_b": {
+        "elapsed_ms": 600,
+        "timed_out": true
+      }
+    },
+    "units_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "fits": true,
+        "remaining_bytes": 24
+      },
+      "answer_b": {
+        "fits": true,
+        "remaining_bytes": 24
+      }
+    },
+    "units_03": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "threshold_ug_l": 800,
+        "alarm": false
+      },
+      "answer_b": {
+        "threshold_ug_l": 800,
+        "alarm": false
+      }
+    },
+    "versions_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "version": "v2",
+        "timeout_seconds": 45
+      },
+      "answer_b": {
+        "version": "v2",
+        "timeout_seconds": 45
+      }
+    },
+    "versions_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "version": "v2",
+        "batch_enabled": false
+      },
+      "answer_b": {
+        "version": "v2",
+        "batch_enabled": false
+      }
+    },
+    "versions_03": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "retention_days": 30,
+        "basis": "已生效规则"
+      },
+      "answer_b": {
+        "retention_days": 30,
+        "basis": "已生效规则"
+      }
+    },
+    "cross_file_01": {
+      "selected_ids": [
+        "focus",
+        "loader"
+      ],
+      "answer_a": {
+        "timeout_seconds": 8
+      },
+      "answer_b": {
+        "timeout_seconds": 8
+      }
+    },
+    "cross_file_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "accepted": false
+      },
+      "answer_b": {
+        "accepted": false
+      }
+    },
+    "cross_file_03": {
+      "selected_ids": [
+        "focus",
+        "principal"
+      ],
+      "answer_a": {
+        "authorized": false,
+        "required_scope": "archive:write"
+      },
+      "answer_b": {
+        "authorized": false,
+        "required_scope": "archive:write"
+      }
+    },
+    "reference_01": {
+      "selected_ids": [
+        "focus",
+        "action"
+      ],
+      "answer_a": {
+        "approved_by": "晚晴"
+      },
+      "answer_b": {
+        "approved_by": "晨星"
+      }
+    },
+    "reference_02": {
+      "selected_ids": [
+        "focus",
+        "qinglan",
+        "haitang"
+      ],
+      "answer_a": {
+        "plan": "青岚",
+        "strategy": "分批迁移"
+      },
+      "answer_b": {
+        "plan": "青岚",
+        "strategy": "分批迁移"
+      }
+    },
+    "reference_03": {
+      "selected_ids": [
+        "focus",
+        "anchor",
+        "ownership"
+      ],
+      "answer_a": {
+        "team": "海棠组"
+      },
+      "answer_b": {
+        "team": "海棠组"
+      }
+    },
+    "logs_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "cause": "磁盘配额耗尽"
+      },
+      "answer_b": {
+        "cause": "磁盘配额耗尽"
+      }
+    },
+    "logs_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "tenant": "Haitang",
+        "cause": "write denied"
+      },
+      "answer_b": {
+        "tenant": null,
+        "cause": "write denied"
+      }
+    },
+    "logs_03": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "interrupted": true,
+        "resumed": true
+      },
+      "answer_b": {
+        "interrupted": true,
+        "resumed": false
+      }
+    },
+    "all_conditions_01": {
+      "selected_ids": [
+        "focus",
+        "rule"
+      ],
+      "answer_a": {
+        "may_release": false,
+        "missing_condition": "人工审批通过"
+      },
+      "answer_b": {
+        "may_release": false,
+        "missing_condition": "人工审批通过"
+      }
+    },
+    "all_conditions_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "eligible": true
+      },
+      "answer_b": {
+        "eligible": true
+      }
+    },
+    "all_conditions_03": {
+      "selected_ids": [
+        "focus",
+        "rule",
+        "state"
+      ],
+      "answer_a": {
+        "may_archive": false,
+        "pending": "目录同步"
+      },
+      "answer_b": {
+        "may_archive": false,
+        "pending": "目录同步"
+      }
+    },
+    "priority_01": {
+      "selected_ids": [
+        "focus",
+        "rule",
+        "state"
+      ],
+      "answer_a": {
+        "decision": "拒绝",
+        "applied_rule": "紧急停用"
+      },
+      "answer_b": {
+        "decision": "拒绝",
+        "applied_rule": "紧急停用"
+      }
+    },
+    "priority_02": {
+      "selected_ids": [
+        "focus",
+        "state"
+      ],
+      "answer_a": {
+        "can_export": false
+      },
+      "answer_b": {
+        "can_export": false
+      }
+    },
+    "priority_03": {
+      "selected_ids": [
+        "focus",
+        "rule",
+        "state"
+      ],
+      "answer_a": {
+        "handling": "人工处理"
+      },
+      "answer_b": {
+        "handling": "人工处理"
+      }
+    },
+    "code_comment_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "timeout_seconds": 30
+      },
+      "answer_b": {
+        "timeout_seconds": 90
+      }
+    },
+    "code_comment_02": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "result": false
+      },
+      "answer_b": {
+        "result": false
+      }
+    },
+    "code_comment_03": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "result": true
+      },
+      "answer_b": {
+        "result": false
+      }
+    },
+    "similar_entities_01": {
+      "selected_ids": [
+        "focus"
+      ],
+      "answer_a": {
+        "entity": "cache_alpha",
+        "ttl_seconds": 60
+      },
+      "answer_b": {
+        "entity": "cache_alpha",
+        "ttl_seconds": 60
+      }
+    },
+    "similar_entities_02": {
+      "selected_ids": [
+        "focus",
+        "zhang_a",
+        "zhang_b"
+      ],
+      "answer_a": {
+        "name": "章宁",
+        "team": "审核组"
+      },
+      "answer_b": {
+        "name": "章宁",
+        "team": "审核组"
+      }
+    },
+    "similar_entities_03": {
+      "selected_ids": [
+        "focus",
+        "north_aa"
+      ],
+      "answer_a": {
+        "device": "NORTH-A",
+        "status": "待校准",
+        "team": "海棠组"
+      },
+      "answer_b": {
+        "device": "NORTH-A",
+        "status": "可用",
+        "team": "青岚组"
+      }
+    },
+    "hidden_01": {
+      "selected_ids": [
+        "focus",
+        "minutes"
+      ],
+      "answer_a": {
+        "format": "CSV"
+      },
+      "answer_b": {
+        "format": "CSV"
+      }
+    },
+    "hidden_02": {
+      "selected_ids": [
+        "focus",
+        "state"
+      ],
+      "answer_a": {
+        "deletes_source": false,
+        "creates_preview": true
+      },
+      "answer_b": {
+        "deletes_source": true,
+        "creates_preview": false
+      }
+    },
+    "hidden_03": {
+      "selected_ids": [
+        "focus",
+        "minutes"
+      ],
+      "answer_a": {
+        "attachments": [
+          "采样批次",
+          "校验摘要"
+        ]
+      },
+      "answer_b": {
+        "attachments": [
+          "采样批次",
+          "校验摘要"
+        ]
+      }
+    }
+  }
+}

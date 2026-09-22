@@ -1,0 +1,28 @@
+[gateway]
+mode = "live"
+host = "127.0.0.1"
+port = 8787
+database = "../../data/gateway.sqlite3"
+
+[local]
+enabled = true
+provider = "ollama"
+base_url = "http://127.0.0.1:11434"
+model = "llama3.2:3b"
+api_key_env = ""
+alias = "local-json"
+
+[cloud]
+enabled = true
+provider = "openai_compatible"
+base_url = "https://api.openai.com/v1"
+model = "gpt-4.1-mini"
+api_key_env = "CLOUD_API_KEY"
+
+[router]
+enabled = true
+
+[context]
+enabled = true
+alias = "adaptive"
+min_input_tokens = 512

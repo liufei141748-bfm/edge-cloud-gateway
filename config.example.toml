@@ -1,0 +1,59 @@
+[gateway]
+mode = "mock" # mock never creates a real network model adapter
+host = "127.0.0.1"
+port = 8787
+database = "data/gateway.sqlite3" # relative to this configuration file
+max_request_bytes = 4194304
+
+[cloud]
+enabled = false # live mode additionally requires explicit true and a key
+provider = "openai_compatible"
+base_url = "" # e.g. your provider's HTTPS base URL ending in /v1
+model = "mock-cloud" # fallback target for the local-json alias
+api_key_env = "CLOUD_API_KEY"
+timeout_seconds = 60
+
+# Rates are user-supplied estimates per million tokens, not a provider quote.
+# With no rates the gateway reports cost as unknown, never as free.
+[cloud.prices]
+currency = "CNY"
+cache_write_mode = "included" # or additional, according to provider billing
+# input_per_million = 0.0
+# output_per_million = 0.0
+# cached_input_per_million = 0.0
+# cache_write_per_million = 0.0
+
+[local]
+enabled = true
+provider = "ollama" # ollama or openai_compatible
+base_url = "http://127.0.0.1:11434"
+model = "local-model"
+api_key_env = "" # optional for openai_compatible; empty means no Authorization header
+model_revision = "" # require a pinned revision to cache live local results
+alias = "local-json"
+num_ctx = 4096
+keep_alive = "5m"
+timeout_seconds = 30
+max_payload_bytes = 3072 # conservative eligibility limit, not a tokenizer count
+max_output_tokens = 512
+
+[cache]
+enabled = false # also requires X-Gateway-Cache: allow or refresh per request
+ttl_seconds = 86400
+
+[router]
+enabled = true # adaptive requests are evaluated automatically; explicit optimize still wins
+
+[observability]
+# Opt-in debug/evaluation artifact. When true, SQLite stores request正文 in Raw/Working snapshots.
+save_context_snapshots = false
+
+[context]
+enabled = true # adaptive messages and explicit gateway_context can be selected
+alias = "adaptive" # maps final reasoning to cloud.model
+min_input_tokens = 512 # <=512 normally goes direct; larger input is only a candidate
+min_savings_ratio = 0.05 # net reduction including context wrappers
+worker_max_bytes = 12288 # bounded selector payload for ordinary long messages
+max_blocks = 128
+log_window_lines = 2
+log_min_lines = 40

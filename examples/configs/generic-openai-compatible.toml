@@ -1,0 +1,30 @@
+[gateway]
+mode = "live"
+host = "127.0.0.1"
+port = 8787
+database = "../../data/gateway.sqlite3"
+
+# Example: LM Studio or vLLM serving an OpenAI-compatible Chat Completions API.
+[local]
+enabled = true
+provider = "openai_compatible"
+base_url = "http://127.0.0.1:8000/v1"
+model = "your-local-model"
+api_key_env = "" # set to "LOCAL_API_KEY" when the endpoint requires a bearer token
+alias = "local-json"
+
+# Example: OpenRouter or another HTTPS OpenAI-compatible endpoint.
+[cloud]
+enabled = true
+provider = "openai_compatible"
+base_url = "https://openrouter.ai/api/v1"
+model = "your-cloud-model"
+api_key_env = "CLOUD_API_KEY"
+
+[router]
+enabled = true
+
+[context]
+enabled = true
+alias = "adaptive"
+min_input_tokens = 512

@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+/build/
+/dist/
+/data/
+/outputs/
+*.sqlite3*
+*.log
+.env
+.env.*
+!.env.example
+/config.local.toml
+/config.local.toml.*
+/evaluation-private/
+.DS_Store
+.idea/
+.vscode/
+
+# Local development records are retained on the workstation but excluded from
+# the public Experimental V1 repository.
+docs/project-worklog.md
+docs/startup-result.json
+docs/danger-ab-verification.md
+docs/change-review.md
+docs/context-protection-fix.md
+docs/selector-requirement-fix.md
+docs/optimized-prompt.txt
+docs/verification.md

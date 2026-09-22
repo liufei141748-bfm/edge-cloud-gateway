@@ -1,0 +1,56 @@
+{
+  "model": "adaptive",
+  "messages": [
+    {
+      "role": "system",
+      "content": "请严格保留约束，不能泄露内部信息。"
+    },
+    {
+      "role": "user",
+      "content": "Explain authentication design."
+    }
+  ],
+  "gateway_context": {
+    "constraints": [
+      "Do not change validate_token; timeout must remain 30 seconds."
+    ],
+    "blocks": [
+      {
+        "id": "code",
+        "source": "src/auth.py",
+        "kind": "code",
+        "optional": true,
+        "content": "def validate_token(token):\n    return token is not None\n"
+      },
+      {
+        "id": "auth",
+        "source": "auth-notes",
+        "kind": "text",
+        "optional": true,
+        "content": "authentication design checks token validity and session expiry"
+      },
+      {
+        "id": "garden",
+        "source": "unrelated-notes",
+        "kind": "text",
+        "optional": true,
+        "content": "gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil gardening discusses plants and soil "
+      },
+      {
+        "id": "big",
+        "source": "long-unrelated-log",
+        "kind": "log",
+        "optional": true,
+        "content": "background heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nTraceback ERROR /src/auth.py:42\nValueError: invalid token\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\nbackground heartbeat normal\n"
+      },
+      {
+        "id": "empty",
+        "source": "empty",
+        "kind": "text",
+        "optional": true,
+        "content": "  \n"
+      }
+    ],
+    "optimize": false
+  }
+}

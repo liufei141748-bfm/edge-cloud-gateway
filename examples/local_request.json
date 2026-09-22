@@ -1,0 +1,31 @@
+{
+  "model": "local-json",
+  "messages": [
+    {
+      "role": "user",
+      "content": "{\"name\":\"小明\",\"amount\":120}"
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "person",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "amount"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

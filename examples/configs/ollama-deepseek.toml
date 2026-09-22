@@ -1,0 +1,30 @@
+[gateway]
+mode = "live"
+host = "127.0.0.1"
+port = 8787
+database = "../../data/gateway.sqlite3"
+
+[local]
+enabled = true
+provider = "ollama"
+base_url = "http://127.0.0.1:11434"
+model = "deepseek-r1:7b"
+api_key_env = ""
+alias = "local-json"
+num_ctx = 8192
+keep_alive = "5m"
+
+[cloud]
+enabled = true
+provider = "openai_compatible"
+base_url = "https://api.deepseek.com/v1"
+model = "deepseek-chat"
+api_key_env = "CLOUD_API_KEY"
+
+[router]
+enabled = true
+
+[context]
+enabled = true
+alias = "adaptive"
+min_input_tokens = 512
