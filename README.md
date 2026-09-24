@@ -130,7 +130,7 @@ Chat Completions requests preserve unknown provider fields on direct cloud paths
 Requirements: Python 3.12.
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/liufei141748-bfm/edge-cloud-gateway.git
 cd edge-cloud-gateway
 python3.12 -m venv .venv
 .venv/bin/python -m pip install -e '.[test]'
@@ -327,4 +327,6 @@ Knowledge services, MCP, Obsidian, and Open WebUI-specific tools remain outside 
 
 Version: `0.1.0` · Release status: **Experimental V1** · License: [MIT](LICENSE).
 
-Before publishing, review [`docs/routing-contract.md`](docs/routing-contract.md) and [`docs/release-privacy-audit.md`](docs/release-privacy-audit.md), initialize a new repository in this directory only, inspect the staged file list, and obtain explicit owner confirmation before creating or making any remote repository public.
+For each release, review [`docs/routing-contract.md`](docs/routing-contract.md) and [`docs/release-privacy-audit.md`](docs/release-privacy-audit.md), inspect the exact committed changes and generated artifacts, and confirm that no credentials, private request content, local databases, or machine-specific paths are included. Never force-add ignored local data.
+
+每次发布前，应检查 [`docs/routing-contract.md`](docs/routing-contract.md) 和 [`docs/release-privacy-audit.md`](docs/release-privacy-audit.md)，核对实际提交内容及生成文件，确认其中不包含密钥、私人请求内容、本地数据库或机器专属路径。不得强制添加已经被忽略的本地数据。
