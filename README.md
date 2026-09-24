@@ -1,5 +1,6 @@
 # Edge-Cloud Gateway
 
+[![CI](https://github.com/liufei141748-bfm/edge-cloud-gateway/actions/workflows/ci.yml/badge.svg)](https://github.com/liufei141748-bfm/edge-cloud-gateway/actions/workflows/ci.yml)
 **Experimental V1 · v0.1.0 · not production-ready**
 
 A quality-first, token-efficient, OpenAI-compatible edge-cloud LLM gateway that automatically routes requests and safely reduces unnecessary cloud input tokens through local context selection.
